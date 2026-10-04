@@ -1,0 +1,5 @@
+# PepLoom website. Nothing is private here; all pages may be indexed.
+User-agent: *
+Allow: /
+
+Sitemap: https://csamaha655-eng.github.io/peploom/sitemap.xml
