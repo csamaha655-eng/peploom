@@ -49,7 +49,7 @@
         <h1 class="h1">Privacy <em>Policy</em></h1>
         <p class="lead">PepLoom is an iPhone app for recording the peptide schedule you already follow. It is a tracker. It does not give medical advice, recommend doses or combinations, or diagnose anything. This policy explains what data PepLoom handles, where it goes and the choices you have.</p>
         <div class="page-meta">
-          <span class="chip"><span class="dot" aria-hidden="true"></span>Effective 4 October 2026</span>
+          <span class="chip"><span class="dot" aria-hidden="true"></span>Effective 16 October 2026</span>
         </div>
       </header>
 
@@ -65,7 +65,7 @@
               <li><a href="#purchases">2. Purchases (Apple and RevenueCat)</a></li>
               <li><a href="#cloud-backup">3. Optional private cloud backup</a></li>
               <li><a href="#reminders">4. Reminders</a></li>
-              <li><a href="#widget">5. Home Screen widget</a></li>
+              <li><a href="#widget">5. Widgets</a></li>
               <li><a href="#exports">6. Exports and files you share</a></li>
               <li><a href="#we-do-not">7. What we do not do</a></li>
               <li><a href="#legal-bases">8. Why we process data</a></li>
@@ -85,7 +85,7 @@
             <div><dt>Provider</dt><dd>PepLoom is developed and operated by Charbel Samaha (“we”, “us”). The App Store lists the seller account through which the app is distributed.</dd></div>
             <div><dt>Contact</dt><dd><a href="mailto:csamaha655@gmail.com">csamaha655@gmail.com</a></dd></div>
             <div><dt>Governing law</dt><dd>This policy is governed by the laws of Lebanon. This does not limit any rights you have under the data-protection laws of the place where you live.</dd></div>
-            <div><dt>Effective date</dt><dd>4 October 2026</dd></div>
+            <div><dt>Effective date</dt><dd>16 October 2026</dd></div>
           </dl>
 
           <h2 id="summary">Summary</h2>
@@ -96,7 +96,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Your records: schedules, dose records, injection locations, notes, journal check-ins and vial inventory</th>
+                  <th scope="row">Your records: schedules, dose records, injection locations, notes, journal check-ins, weight entries and vial inventory</th>
                   <td data-label="Where it goes">Stored on your iPhone. They are not included in iCloud or computer backups of your device. A copy goes to PepLoom’s server only if you turn on cloud backup.</td>
                   <td data-label="Who can access it">You. We do not receive them unless you turn on cloud backup.</td>
                 </tr>
@@ -113,12 +113,12 @@
                 <tr>
                   <th scope="row">Reminder notifications</th>
                   <td data-label="Where it goes">Scheduled locally on your iPhone</td>
-                  <td data-label="Who can access it">Nobody else. Notification text contains no peptide names or amounts.</td>
+                  <td data-label="Who can access it">Nobody else. Notification text shows peptide names and amounts only if you turn on Show peptide names.</td>
                 </tr>
                 <tr>
                   <th scope="row">Widget summary</th>
                   <td data-label="Where it goes">A protected shared file on your iPhone</td>
-                  <td data-label="Who can access it">Only the PepLoom widget on your device</td>
+                  <td data-label="Who can access it">Only the PepLoom widgets on your device</td>
                 </tr>
               </tbody>
             </table>
@@ -134,6 +134,7 @@
             <li>Stacks, which are groups you create</li>
             <li>Journal check-ins, made of a mood rating and an optional note</li>
             <li>Vial inventory: name, remaining amount and expiry date</li>
+            <li>Weight entries: your weight, the unit you used, and the date and time</li>
             <li>Reminder preferences</li>
           </ul>
           <p><strong>Where:</strong> these records are saved in PepLoom’s private app storage on your iPhone, using iOS file protection. When a restore or replacement would overwrite your records, PepLoom first keeps a copy of the earlier file in protected app storage (“Previous saved files”).</p>
@@ -162,7 +163,7 @@
           <p>You sign in with Sign in with Apple. PepLoom does not request your name or email address from Apple. Our server stores Apple’s stable identifier for your PepLoom sign-in, which is an opaque identifier and not your Apple Account email. It also stores an account number that we generate.</p>
           <h3>What is sent, and when</h3>
           <p>Nothing is uploaded until you turn on backup. You can turn it on in two places: on the optional last page of the welcome screens, which shows this notice above the “Continue with Apple” button, or later in Settings → Private cloud backup, where signing in alone never uploads anything until you choose to back up. The notice reads:</p>
-          <blockquote><p>“When you choose to back up, PepLoom sends a complete copy of your records — schedules, dose records, injection locations, notes, journal check-ins and inventory — to PepLoom’s private server, operated on Cloudflare. It is linked to your Sign in with Apple account, encrypted in transit and stored by Cloudflare, but it is not end-to-end encrypted. PepLoom does not ask Apple for your name or email. Your iPhone keeps its own copy and works offline. You can erase the cloud copy or delete your cloud account at any time. Deleted data may persist in Cloudflare’s infrastructure backups for a limited period.”</p></blockquote>
+          <blockquote><p>“When you choose to back up, PepLoom sends a complete copy of your records — schedules, dose records, injection locations, notes, journal check-ins, weight entries and inventory — to PepLoom’s private server, operated on Cloudflare. It is linked to your Sign in with Apple account, encrypted in transit and stored by Cloudflare, but it is not end-to-end encrypted. PepLoom does not ask Apple for your name or email. Your iPhone keeps its own copy and works offline. You can erase the cloud copy or delete your cloud account at any time. Deleted data may persist in Cloudflare’s infrastructure backups for a limited period.”</p></blockquote>
           <p>After that, while the app is open, PepLoom keeps the cloud copy up to date with your iPhone. Copies that differ are never merged silently. You choose which version to keep, and PepLoom saves the other version as a file on your iPhone.</p>
           <h3>What our server stores for your account</h3>
           <ul>
@@ -190,20 +191,21 @@
           <p><strong>Erasing all local records</strong> first signs you out of cloud backup on that iPhone. It does not delete the cloud copy. Erase the cloud copy separately if you want it gone.</p>
 
           <h2 id="reminders"><span class="num">4.</span>Reminders (notifications)</h2>
-          <p>Reminders are optional, and iOS asks for permission only when you turn them on. They are <strong>local notifications scheduled on your iPhone</strong>. We do not send them from a server. Their text is generic (“Your PepLoom check-in” / “Open your schedule to review your next planned dose”) and never includes peptide names or amounts. You can turn reminders off in PepLoom or in iOS Settings.</p>
+          <p>Reminders are optional, and iOS asks for permission only when you turn them on. They are <strong>local notifications scheduled on your iPhone</strong>. We do not send them from a server. By default their text is generic (“Your PepLoom check-in” and the scheduled time) and does not include peptide names or amounts. If you turn on Show peptide names in Settings, reminders show the peptide name and amount, including on your Lock Screen. You can turn reminders off in PepLoom or in iOS Settings.</p>
 
-          <h2 id="widget"><span class="num">5.</span>Home Screen widget</h2>
-          <p>The PepLoom widget reads a small summary file that the app writes to a protected shared container on your iPhone. The file contains only:</p>
+          <h2 id="widget"><span class="num">5.</span>Widgets</h2>
+          <p>PepLoom’s Home Screen and Lock Screen widgets read a small summary file that the app writes to a protected shared container on your iPhone. The file contains only:</p>
           <ul>
-            <li>today’s scheduled and recorded counts</li>
+            <li>today’s and tomorrow’s scheduled and recorded counts, and whether a schedule pause covers them</li>
             <li>your recording streak</li>
+            <li>the names and times of your next doses that are not yet recorded, and how many are due at each time</li>
             <li>whether your plan is active, and when access expires</li>
             <li>your time zone and the boundaries of the current day</li>
           </ul>
-          <p>It does not include names, amounts, notes or injection locations. The file uses iOS file protection, is excluded from device backups, and never leaves your iPhone.</p>
+          <p>The Home Screen widget shows counts and your streak, without names. The Lock Screen widget shows the name and time of your next dose; iOS hides the name while your iPhone is locked. The file does not include amounts, notes or injection locations. It uses iOS file protection, is excluded from device backups, and never leaves your iPhone.</p>
 
           <h2 id="exports"><span class="num">6.</span>Exports and files you share</h2>
-          <p>You can export all records as JSON, or your dose history as CSV, from Settings or from “Your records” on the plans screen, even without a paid plan. <strong>Exported files are not password protected.</strong> A file leaves the app only when you pick a destination in the iOS share sheet. After that, the destination’s terms apply, and we cannot delete copies you saved or shared. Restoring a JSON backup is checked on your iPhone and needs your confirmation.</p>
+          <p>You can export all records as JSON, your dose history as CSV, or a PDF dose record, from Settings or from “Your records” on the plans screen, even without a paid plan. <strong>Exported files are not password protected.</strong> A file leaves the app only when you pick a destination in the iOS share sheet. After that, the destination’s terms apply, and we cannot delete copies you saved or shared. Restoring a JSON backup is checked on your iPhone and needs your confirmation.</p>
 
           <h2 id="we-do-not"><span class="num">7.</span>What we do not do</h2>
           <ul>
